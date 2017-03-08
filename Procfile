@@ -1,1 +1,1 @@
-web: java -jar target/AccommodationDeals.war
+web: java -jar target/AccommodationDeals.jar
