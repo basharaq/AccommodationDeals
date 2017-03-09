@@ -12,7 +12,7 @@
         </div>
 
         <% for (HotelDeal deal: deals.getDeals()) { %>
-            <div style="height: 120px; width: 90%; margin-bottom: 10px; border: solid 1px; border-color: darkgray; padding: 5px;">
+            <div style="height: 150px; width: 90%; margin-bottom: 10px; border: solid 1px; border-color: darkgray; padding: 5px;">
                 <div style="display: inline-block; float: left; margin-right: 10px; height: 100%; width: 10%;">
                     <a href="<%= deal.getHotel().getInfoUrl() %>"><img src="<%= deal.getHotel().getImageUrl() %>"></a>
                 </div>
@@ -35,6 +35,9 @@
                     <% if (deal.getNumberOfPeopleBooked() > 0) { %>
                     <div style="margin-bottom: 10px;"><%= deal.getNumberOfPeopleBooked() %> people booked this</div>
                     <% } %>
+                    <div style="margin-bottom: 10px;">
+                        <a href="<%= deal.getHotel().getInfoUrl() %>">Book This Deal</a>
+                    </div>
                 </div>
             </div>
         <% } %>
