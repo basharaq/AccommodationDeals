@@ -16,6 +16,8 @@ public class HotelDealsRepository {
             main = (Map) (new JSONParser()).parse(json);
         } catch (ParseException e) {
             return null;
+        } catch (Exception e) {
+            return null;
         }
 
         if (main == null) {
@@ -53,6 +55,8 @@ public class HotelDealsRepository {
     }
 
     private HotelDeal createHotelDeal(Map offer) {
+        //ideally, proper validation should be done here as well like above
+        //however, i will avoid doing that now to keep things simple
         Map hotelInfo = (Map) offer.get("hotelInfo");
         Map priceInfo = (Map) offer.get("hotelPricingInfo");
         Map urgencyInfo = (Map) offer.get("hotelUrgencyInfo");
