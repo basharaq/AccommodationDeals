@@ -1,1 +1,1 @@
-web: java -jar target/AccommodationDeals.jar
+web: sh target/bin/webapp

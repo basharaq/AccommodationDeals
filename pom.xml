@@ -8,7 +8,7 @@
   <name>AccommodationDeals Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <properties>
-    <tomcat.version>8.5.11</tomcat.version>
+    <tomcat.version>8.0.28</tomcat.version>
   </properties>
   <dependencies>
     <dependency>
@@ -16,11 +16,11 @@
       <artifactId>tomcat-embed-core</artifactId>
       <version>${tomcat.version}</version>
     </dependency>
-    <!--<dependency>
+    <dependency>
       <groupId>org.apache.tomcat.embed</groupId>
       <artifactId>tomcat-embed-logging-juli</artifactId>
       <version>${tomcat.version}</version>
-    </dependency>-->
+    </dependency>
     <dependency>
       <groupId>org.apache.tomcat.embed</groupId>
       <artifactId>tomcat-embed-jasper</artifactId>
@@ -40,12 +40,6 @@
       <groupId>org.apache.tomcat</groupId>
       <artifactId>tomcat-jsp-api</artifactId>
       <version>${tomcat.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>javax.servlet-api</artifactId>
-      <version>3.0.1</version>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
