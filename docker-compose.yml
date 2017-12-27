@@ -1,0 +1,25 @@
+version: "2"
+
+---
+volumes:
+  not_found-data:
+    driver: local
+
+
+---
+services:
+  web:
+    image: NOT_FOUND
+  app:
+    image: your_image_name_here:latest
+    build:
+      context: "."
+      dockerfile: dev.Dockerfile
+    command: java -jar /usr/src/app/app.jar
+    working_dir: "/usr/src/app"
+    stdin_open: true
+    tty: true
+    links:
+    - db
+    depends_on:
+    - db
